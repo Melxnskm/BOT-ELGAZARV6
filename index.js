@@ -1,6 +1,6 @@
 
 require('./settings')
-const { default: ElgazarBotConnect, useSingleFileAuthState, DisconnectReason, fetchLatestBaileysVersion, generateForwardMessageContent, prepareWAMessageMedia, generateWAMessageFromContent, generateMessageID, downloadContentFromMessage, makeInMemoryStore, jidDecode, proto } = require("@adiwajshing/baileys")
+const { default: MedoBotConnect, useSingleFileAuthState, DisconnectReason, fetchLatestBaileysVersion, generateForwardMessageContent, prepareWAMessageMedia, generateWAMessageFromContent, generateMessageID, downloadContentFromMessage, makeInMemoryStore, jidDecode, proto } = require("@adiwajshing/baileys")
 const { state, saveState } = useSingleFileAuthState(`${sessionName}.json`)
 const pino = require('pino')
 const { Boom } = require('@hapi/boom')
@@ -69,14 +69,14 @@ if (global.db) setInterval(async () => {
   }, 30 * 1000)
 
 async function startElgazarBot() {
-    const ElgazarBot = ElgazarBotConnect({
+    const Medo-BOT = MedoBotConnect({
         logger: pino({ level: 'silent' }),
         printQRInTerminal: true,
         browser: ['Cheems Bot MD','Safari','1.0.0'],
         auth: state
     })
 
-    store.bind(ElgazarBot.ev)
+    store.bind(MedoBot.ev)
     
     // anticall auto block
     ElgazarBot.ws.on('CB:call', async (json) => {
@@ -110,7 +110,7 @@ async function startElgazarBot() {
        //console.log(pea)
     // Get Profile Picture Group
        try {
-       ppgc = await ElgazarBot.profilePictureUrl(pea[0].id, 'image')
+       ppgc = await MedoBot.profilePictureUrl(pea[0].id, 'image')
        } catch {
        ppgc = 'https://i.ibb.co/RBx5SQC/avatar-group-large-v2.png'
        }
