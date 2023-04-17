@@ -111,7 +111,7 @@ const isCmd = body.startsWith(prefix)
 const command = body.replace(prefix, '').trim().split(/ +/).shift().toLowerCase()
 const args = body.trim().split(/ +/).slice(1)
 const pushname = m.pushName || "No Name"
-const botNumber = await ElgazarBot.decodeJid(ElgazarBot.user.id)
+const botNumber = await Medo-BOT.decodeJid(Medo-BOT.user.id)
 const isCreator = [botNumber, ...global.owner].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
 const itsMe = m.sender == botNumber ? true : false
 const text = q = args.join(" ")
@@ -291,7 +291,7 @@ const hsjdh = randomNomor(5)
 // total hit
         global.hit = {}
 if (isCmd) {
-data = await fetchJson('https://api.countapi.xyz/hit/ElgazarBot-md/visits')
+data = await fetchJson('https://i.imgur.com/Eckx4AG.jpeg')
 jumlahcmd = `${data.value}`
 dataa = await fetchJson(`https://api.countapi.xyz/hit/ElgazarBot-md${moment.tz('Asia/Kolkata').format('DDMMYYYY')}/visits`)
 jumlahharian = `${dataa.value}`
@@ -348,7 +348,7 @@ detectLinks: false,
     //reply fake
 	//group target \\
 const reply = (teks) => {
-           ElgazarBot.sendMessage(m.chat, { text: teks, contextInfo:{"externalAdReply": {"title": ` ${global.botname}`,"body": `${ownername}`, "previewType": "PHOTO","thumbnailUrl": ``,"thumbnail": fs.readFileSync(`./XeonMedia/theme/cheemspic.jpg`),"sourceUrl": `${linkz}`}}}, { quoted: m})
+           Medo-BOT.sendMessage(m.chat, { text: teks, contextInfo:{"externalAdReply": {"title": ` ${global.botname}`,"body": `${ownername}`, "previewType": "PHOTO","thumbnailUrl": ``,"thumbnail": fs.readFileSync(`./XeonMedia/theme/cheemspic.jpg`),"sourceUrl": `${linkz}`}}}, { quoted: m})
         }
 
 	//button
@@ -397,7 +397,7 @@ let buttonMessage = {
      mediaType: 1
    }}
        }
-   ElgazarBot.sendMessage(m.chat, buttonMessage, options)
+   Medo-BOT.sendMessage(m.chat, buttonMessage, options)
    }
                 
         // Autosticker gc
@@ -455,8 +455,8 @@ kice = m.sender
 			            participant: m.key.participant
 			        }
 			    })
-			ElgazarBot.groupParticipantsUpdate(m.chat, [m.sender], 'remove')
-ElgazarBot.sendMessage(from, {text:`\`\`\`「 Wa.me Link Detected 」\`\`\`\n\n@${kice.split("@")[0]} Has been kicked because of sending wa.me link in this group`, contextInfo:{mentionedJid:[kice]}}, {quoted:m})
+			(m.chat, [m.sender], 'remove')
+Medo-BOT.sendMessage(from, {text:`\`\`\`「 Wa.me Link Detected 」\`\`\`\n\n@${kice.split("@")[0]} Has been kicked because of sending wa.me link in this group`, contextInfo:{mentionedJid:[kice]}}, {quoted:m})
 } else {
 }
   if (antiWame)
@@ -538,7 +538,7 @@ if (isCreator) return m.reply(bvl)
 			        }
 			    })
 			ElgazarBot.groupParticipantsUpdate(m.chat, [m.sender], 'remove')
-ElgazarBot.sendMessage(from, {text:`\`\`\`「 YouTube Video Link Detected 」\`\`\`\n\n@${m.sender.split("@")[0]} Has been kicked because of sending youtube video link in this group`, contextInfo:{mentionedJid:[m.sender]}}, {quoted:m})
+Medo-BOT.sendMessage(from, {text:`\`\`\`「 YouTube Video Link Detected 」\`\`\`\n\n@${m.sender.split("@")[0]} Has been kicked because of sending youtube video link in this group`, contextInfo:{mentionedJid:[m.sender]}}, {quoted:m})
 } else {
 }
 //antilink youtube channel by xeon
@@ -558,8 +558,8 @@ if (isCreator) return m.reply(bvl)
 			            participant: m.key.participant
 			        }
 			    })
-			ElgazarBot.groupParticipantsUpdate(m.chat, [m.sender], 'remove')
-ElgazarBot.sendMessage(from, {text:`\`\`\`「 YouTube Channel Link Detected 」\`\`\`\n\n@${m.sender.split("@")[0]} Has been kicked because of sending youtube channel link in this group`, contextInfo:{mentionedJid:[m.sendet]}}, {quoted:m})
+			.groupParticipantsUpdate(m.chat, [m.sender], 'remove')
+Medo-BOT.sendMessage(from, {text:`\`\`\`「 YouTube Channel Link Detected 」\`\`\`\n\n@${m.sender.split("@")[0]} Has been kicked because of sending youtube channel link in this group`, contextInfo:{mentionedJid:[m.sendet]}}, {quoted:m})
 } else {
 }
 //antilink instagram by xeon
@@ -2015,7 +2015,7 @@ if (!text) return m.reply(`Example : ${prefix + command} Stay jb`)
 *┃🎲الوصف :* ${anulay.description}
 *┃🌿 الرابط :* ${anulay.url}
 
-┃اسم البوت : 📶 𝗕𝗢𝗧 𝗘𝗟𝗚𝗔𝗭𝗔𝗥 📶 
+┃اسم البوت : 📶 Medo-BOT 📶 
 
 ┗━━━━━━━━━❊`,
                     footer: botname,
@@ -2307,7 +2307,7 @@ if(!q) throw `Use ${prefix + command} text`
 m.reply(mess.wait)
 maker.textpro("https://textpro.me/3d-box-text-effect-online-880.html", [
     `${q}`,])
-.then((data) => ElgazarBot.sendMessage(m.chat, { image: { url: data }, caption: `Made by ${global.botname}` }, { quoted: m }))
+.then((data) => Medo-Bot.sendMessage(m.chat, { image: { url: data }, caption: `Made by ${global.botname}` }, { quoted: m }))
 .catch((err) => console.log(err));
 break
 
@@ -5476,7 +5476,7 @@ const result4 = `*تحميل ميديافاير*
 *التمثيل* : ${baby1[0].mime}
 *لينك* : ${baby1[0].link}`
 m.reply(`${result4}`)
-ElgazarBot.sendMessage(m.chat, { document : { url : baby1[0].link}, fileName : baby1[0].nama, mimetype: baby1[0].mime }, { quoted : m }).catch ((err) => reply(mess.error))
+Medo-Bot.sendMessage(m.chat, { document : { url : baby1[0].link}, fileName : baby1[0].nama, mimetype: baby1[0].mime }, { quoted : m }).catch ((err) => reply(mess.error))
 }
 break
 case 'lyrics2': {
@@ -9177,12 +9177,12 @@ footer: `${botname}`,
 buttons: buttons,
 headerType: 4,
 contextInfo:{externalAdReply:{
-title:"ᴇʟɢᴀᴢᴀʀ ʙᴏт",
-body: "سورس الجزار", 
+title:"Medo-BOT",
+body: "سورس ميدو-شانكس", 
 thumbnail: fs.readFileSync("XeonMedia/theme/cheemspic.jpg"),
 mediaType:1,
-mediaUrl: 'https://telegra.ph/file/e6259010eb14f0e5fb98d.jpg',
-sourceUrl: "https://telegra.ph/file/e6259010eb14f0e5fb98d.jpg"
+mediaUrl: 'https://i.imgur.com/Eckx4AG.jpeg',
+sourceUrl: "https://i.imgur.com/Eckx4AG.jpeg"
 }}
 }
 ElgazarBot.sendMessage(m.chat, buttonMessage, { quoted: m })
@@ -9225,12 +9225,12 @@ footer: `${botname}`,
 buttons: buttons,
 headerType: 4,
 contextInfo:{externalAdReply:{
-title:"ᴇʟɢᴀᴢᴀʀ ʙᴏт",
-body: "سورس الجزار", 
+title:"Medo-BOT",
+body: "سورس ميدو-شانكس", 
 thumbnail: fs.readFileSync("XeonMedia/theme/cheemspic.jpg"),
 mediaType:1,
-mediaUrl: 'https://telegra.ph/file/e6259010eb14f0e5fb98d.jpg',
-sourceUrl: "https://telegra.ph/file/e6259010eb14f0e5fb98d.jpg"
+mediaUrl: 'https://i.imgur.com/Eckx4AG.jpeg',
+sourceUrl: "https://i.imgur.com/Eckx4AG.jpeg"
 }}
 }
 ElgazarBot.sendMessage(m.chat, buttonMessage, { quoted: m })
